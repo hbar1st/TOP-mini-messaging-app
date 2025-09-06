@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <% messages.forEach((el,i) => { %>
+            <dt>User</dt>
+            <dd><%= el.user %></dd>
+            <dt>Text</dt>
+            <dd><%= el.text %></dd>
+            <dt>Date</dt>
+            <dd><%= el.added %></dd>
+            <% if (i < messages.length-1)  { %>
+                <hr>
+            <% } %>
+        <% }); %>
+    </dl>
+</body>
+</html>
