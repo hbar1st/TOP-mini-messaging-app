@@ -1,0 +1,24 @@
+{
+  "name": "top-mini-messaging-app",
+  "version": "1.0.0",
+  "description": "A mini messaging app for Express practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbar1st/TOP-mini-messaging-app.git"
+  },
+  "author": "hbar1st",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbar1st/TOP-mini-messaging-app/issues"
+  },
+  "homepage": "https://github.com/hbar1st/TOP-mini-messaging-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
