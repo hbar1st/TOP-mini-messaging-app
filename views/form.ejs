@@ -7,16 +7,32 @@
     <title>New Message Form</title>
 </head>
 <body>
-    <form method="POST" action="/new">
+    <form method="POST" action="/new/<%= index %>">
         <h1>Add New Message</h1>
         <label for="textmsg">
             Message:
-            <textarea required name="textmsg" id="textmsg" rows="2"></textarea>
+            <% if (text) { %>
+                <textarea required name="textmsg" id="textmsg" rows="2"><%= text %></textarea>
+            <% } else { %>
+                <textarea required name="textmsg" id="textmsg" rows="2"></textarea>
+            <% } %>
+            
         </label>
         <label for="author">
             Author:
-            <input required type="text" name="author" id="author">
+            <% if (user) { %>
+                <input required type="text" name="author" id="author" value="<%= user %>">
+            <% } else { %>
+                <input required type="text" name="author" id="author">
+            <% } %>  
         </label>
+            
+        <% if (added) { console.log(new Date(added).toISOString().replace(/[:]\d\d\..+Z$/,"")) %>
+            <label for="timestamp">
+            Timestamp:
+                <input type="datetime-local" name="timestamp" id="timestamp" value="<%= new Date(added).toISOString().replace(/[:]\d\d\..+Z$/,"") %>">
+            </label>
+        <% } %>  
         <input type="submit" value="Submit">
     </form>
 </body>

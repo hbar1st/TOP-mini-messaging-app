@@ -22,7 +22,7 @@
                 <dt>Date</dt>
                 <dd><%= el.added %></dd>
             </div>
-            <button type="button">View Details</button>
+            <form method="GET" action="/details?index=<%= i %>"><button type="submit">View Details</button></form>
             <% if (i < messages.length-1)  { %>
                 <hr>
             <% } %>
