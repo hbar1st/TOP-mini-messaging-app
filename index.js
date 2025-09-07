@@ -32,7 +32,11 @@ app.get("/", (req, res) => {
 /**
  * 
  */
-app.get("/new", (req, res) => { });
+app.route("/new").get((req, res) => {
+    res.render("form");
+}).post((req, res) => {
+    console.log("in post");
+ });
 
 const server = app.listen(port, () => {
   console.log(`listening on port ${port}`);

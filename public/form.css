@@ -1,0 +1,40 @@
+* {
+    padding: none;
+    margin: 0;
+}
+
+body {
+    margin: 15dvh 1rem;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+form {
+    border: 3px solid darkred;
+    border-radius: 3px;
+    box-shadow: 3px 2px 2px lightsteelblue;
+    background-color: bisque;
+    width: 500px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+label {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-row: 1fr;
+}
+
+input[type="submit"] {
+    background-color: darkred;
+    color: white;
+    border-color: darkred;
+    padding: 5px;
+    letter-spacing: .5mm;
+}
