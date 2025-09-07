@@ -16,7 +16,7 @@
         <% messages.forEach((el,i) => { %>
             <div>
                 <dt>User</dt>
-                <dd><%= el.user %></dd>
+                <dd>from: <%= el.user %></dd>
                 <dt>Text</dt>
                 <dd><%= el.text %></dd>
                 <dt>Date</dt>
@@ -25,7 +25,7 @@
             <form method="GET" action="/details">
                 
                 <input type="hidden" name="index" value="<%= i %>" /> 
-                <button type="submit">View Details</button></form>
+                <button type="submit">Edit Details</button></form>
             <% if (i < messages.length-1)  { %>
                 <hr>
             <% } %>
