@@ -27,7 +27,7 @@
             <% } %>  
         </label>
             
-        <% if (added) { console.log(new Date(added).toISOString().replace(/[:]\d\d\..+Z$/,"")) %>
+        <% if (added) { %>
             <label for="timestamp">
             Timestamp:
                 <input type="datetime-local" name="timestamp" id="timestamp" value="<%= new Date(added).toISOString().replace(/[:]\d\d\..+Z$/,"") %>">

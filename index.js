@@ -35,8 +35,7 @@ app.get("/", (req, res) => {
  */
 app.get("/details", (req, res) => {
     const { index } = req.query;
-    
-    if (index >= 0) {   
+    if (+index >= 0) {   
         res.render("form", { text: messages[index].text, user: messages[index].user, added: messages[index].added, index });
     } else {
         throw(new Error("Programmer Error: No index was provided with the path."))
