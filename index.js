@@ -6,6 +6,7 @@ app.set("view engine", "ejs");
 const path = require("node:path");
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
+app.use(express.urlencoded({ extended: true })); //used to parse form body
 
 const port = process.env.PORT || 3000;
 
@@ -35,8 +36,10 @@ app.get("/", (req, res) => {
 app.route("/new").get((req, res) => {
     res.render("form");
 }).post((req, res) => {
-    console.log("in post");
- });
+    const { textmsg, author } = req.body;
+    messages.push({ text: textmsg, user: author, added: new Date() });
+    res.redirect("/");
+});
 
 const server = app.listen(port, () => {
   console.log(`listening on port ${port}`);
