@@ -13,7 +13,7 @@ h1 {
 form {
     border: 3px solid darkred;
     border-radius: 3px;
-    box-shadow: 3px 2px 2px lightsteelblue;
+    box-shadow: 3px 2px 2px #795548;
     background-color: bisque;
     width: 500px;
     display: grid;
@@ -28,7 +28,7 @@ form {
 label {
     display: grid;
     grid-template-columns: 1fr 400px;
-    grid-row: 1fr;
+    grid-template-rows: 1fr;
 }
 
 input[type="submit"] {
@@ -38,3 +38,4 @@ input[type="submit"] {
     padding: 5px;
     letter-spacing: .5mm;
 }
+

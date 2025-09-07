@@ -8,7 +8,7 @@
 </head>
 <nav>
     <ul>
-        <li><a href="new">Add a new message</a></li>
+        <li><a class="anchors" href="new">Add a new message</a></li>
     </ul>
 </nav>
 <body>
@@ -22,7 +22,6 @@
                 <dt>Date</dt>
                 <dd><%= el.added %></dd>
             </div>
-            <a href="details"></a>
             <form method="GET" action="/details">
                 
                 <input type="hidden" name="index" value="<%= i %>" /> 

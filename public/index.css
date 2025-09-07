@@ -6,17 +6,46 @@ display: grid;
     align-items: center;
     align-content: center;
     justify-items: center;
+    row-gap: .5rem;
 }
 
 hr {
     grid-column: 1 / 3;
     width: 100%;
+    font-weight:600;
 }
 button {
     width: 70px;
     aspect-ratio: 1;
+    border: 1px solid blue;
+    padding: 5px;
+    margin: 5px;
+    background-color:aliceblue;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 540;
 }
 
-ul {
+.anchors {
+    border: 1px solid blue;
+    padding: 5px;
+    margin: 5px;
+    background-color:aliceblue;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 540;
+}
+
+dl, ul {
     list-style-type: none;
+}
+
+dd {
+    background-color: aliceblue;
+}
+
+dt:nth-child(odd) {
+    background-color: rgb(212, 234, 254);
 }
