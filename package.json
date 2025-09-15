@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node --watch index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "node --inspect=127.0.0.1:3001 index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/hbar1st/TOP-mini-messaging-app#readme",
   "dependencies": {
+    "dotenv": "^17.2.2",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
   }
 }
