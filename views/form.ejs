@@ -7,7 +7,8 @@
     <title>New Message Form</title>
 </head>
 <body>
-    <form method="POST" action="/new/<%= id %>">
+    <%- include("partials/errors.ejs") %>
+    <form method="POST" action="/new/<%= msgid %>">
         <h1><% if (text) { %> Message <% } else { %> Add New Message <% } %></h1>
         <label for="textmsg">
             Message:

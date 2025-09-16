@@ -7,7 +7,7 @@ messagesRouter.get("/", messagesController.messagesListGet);
 
 messagesRouter.get("/details", messagesController.messagesDetailsGet);
 
-messagesRouter.post("/new{/:id}", messagesController.newMessagePost);
+messagesRouter.post("/new{/:msgid}", messagesController.newMessagePost);
 
 messagesRouter.get("/new{/:id}", messagesController.newMessageGet);
 
