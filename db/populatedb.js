@@ -34,22 +34,20 @@ async function main() {
   console.log("seeding...");
   /**
    * old way of relying on env variables
-   */
+   
   
   const client = new Client({
     connectionString: pool.connectionString,
   });
-  
+  */
 
   /**
    * new way of using command line variables
-   *
+   */
   const client = new Client({
-    connectionString: `postgresql://${argv[2]}:${argv[3]}@localhost:${
-      argv[4] ?? 5432
-    }/top_users`,
+    connectionString: `postgresql://postgres:<replace with connect string from PAAS like railway>`,
   });
-  */
+  
   await client.connect();
   try {
     await client.query(INITIAL_SETUP_SQL);

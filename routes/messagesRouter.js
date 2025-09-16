@@ -7,9 +7,9 @@ messagesRouter.get("/", messagesController.messagesListGet);
 
 messagesRouter.get("/details", messagesController.messagesDetailsGet);
 
-messagesRouter.post("/new{/:index}", messagesController.newMessagePost);
+messagesRouter.post("/new{/:id}", messagesController.newMessagePost);
 
-messagesRouter.get("/new{/:index}", messagesController.newMessageGet);
+messagesRouter.get("/new{/:id}", messagesController.newMessageGet);
 
 module.exports = messagesRouter;
 
