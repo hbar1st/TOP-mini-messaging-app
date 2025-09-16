@@ -7,6 +7,8 @@ pool = new Pool({
   connectionString,
 });
 
+console.log("connection string: ", connectionString);
+
 module.exports = {
   connectionString,
   pool
