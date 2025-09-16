@@ -17,11 +17,9 @@ exports.messagesListGet = async (req, res) => {
 }
 
 exports.messagesDetailsGet = async (req, res) => {
-  console.log("in messagesDetailsGet");
   
   const { id } = req.query;
   const messages = (id > 0) ? await db.getMessageDetails(id) : [];
-  console.log("trying to view messages: ", messages);
   if (messages.length >= 0) {
     res.render("form", {
       text: messages[0].text,
@@ -71,7 +69,6 @@ exports.newMessagePost = [
       timestamp = new Date();
     }
 
-    console.log({ id });
     if (id !== "false") {
       db.updateMessage(id, textmsg, author, timestamp);
     } else {

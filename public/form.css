@@ -11,10 +11,10 @@ h1 {
     margin-bottom: 20px;
 }
 form {
-    border: 3px solid darkred;
+    border: 3px solid rgb(0, 39, 139);
     border-radius: 3px;
     box-shadow: 3px 2px 2px #795548;
-    background-color: bisque;
+    background-color: aliceblue;
     width: 500px;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -32,10 +32,20 @@ label {
 }
 
 input[type="submit"] {
-    background-color: darkred;
+    background-color: rgb(0, 39, 139);
     color: white;
-    border-color: darkred;
+    border-color: rgb(0, 90, 139);
     padding: 5px;
     letter-spacing: .5mm;
 }
 
+ul {
+    list-style-type: circle;
+    color: red;
+    font-weight: 600;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid darkred;
+}
